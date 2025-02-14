@@ -1,4 +1,16 @@
-
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+build/
 vs2019_project/.vs/ft2-clone/v16/.suo
 vs2019_project/enc_temp_folder/*
 vs2019_project/ft2-clone/Release/ft2-clone.vcxproj.FileListAbsolute.txt
@@ -24,3 +36,5 @@ vs2019_project/ft2-clone/Debug/ft2-clone.vcxproj.FileListAbsolute.txt
 *.iobj
 *.enc
 release/macos/ft2-clone-macos.app/Contents/MacOS/ft2-clone-macos
+src/ft2-clone.rc
+src/ft2-clone.aps

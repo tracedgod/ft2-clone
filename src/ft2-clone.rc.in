@@ -9,7 +9,7 @@
 
 #define VER_FILETYPE                    VFT_APP
 #define VER_FILESUBTYPE                 VFT2_UNKNOWN
-#define VER_FILEDESCRIPTION_STR         "Fasttracker II clone\0"
+#define VER_FILEDESCRIPTION_STR         "@PROJECT_DESCRIPTION@\0"
 
 #define VER_INTERNALNAME_STR            "ft2-clone\0"
 #define VER_ORIGINALFILENAME_STR        "ft2-clone.exe\0"
@@ -18,13 +18,13 @@
 #define VER_FILEVERSION_STR             "1.0.0.0\0"
 
 #undef VER_PRODUCTNAME_STR
-#define VER_PRODUCTNAME_STR             "Fasttracker II clone\0"
+#define VER_PRODUCTNAME_STR             "@PROJECT_DESCRIPTION@\0"
 
 #undef VER_PRODUCTVER
-#define VER_PRODUCTVER                  1,95,0,0
+#define VER_PRODUCTVER                  @PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@,0
 
 #undef VER_PRODUCTVER_STR
-#define VER_PRODUCTVER_STR              "1,95,0,0\0"
+#define VER_PRODUCTVER_STR              "@PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@,0\0"
 
 #undef VER_COMPANYNAME_STR
 #define VER_COMPANYNAME_STR             "Olav ""8bitbubsy"" S\xF8rensen\0"
