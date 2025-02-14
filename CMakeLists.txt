@@ -66,6 +66,7 @@ target_link_libraries(ft2-clone
     PRIVATE Threads::Threads
 )
 
+# Set some MSVC specific flags for the build
 if(WIN32)
     if(MSVC)
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /W4 /MP /Oi /Ot /Oy /GF /Gm- /MT /GS- /Gy /fp:fast /Zc:wchar_t- /GR-")
@@ -84,6 +85,7 @@ target_compile_definitions(ft2-clone
     PRIVATE HAS_LIBFLAC
 )
 
+# Add some specific MSVC links for Windows
 if(MSVC)
     target_link_options(ft2-clone
         PRIVATE /NODEFAULTLIB:LIBCMT
