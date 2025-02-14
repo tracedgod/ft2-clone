@@ -2,8 +2,18 @@ cmake_minimum_required(VERSION 3.10)
 
 project(ft2-clone VERSION 1.95.0.0 LANGUAGES C CXX DESCRIPTION "Fasttracker II clone")
 
+if(WIN32)
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${ft2-clone_SOURCE_DIR}/release/win")
+elseif(UNIX)
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${ft2-clone_SOURCE_DIR}/release/linux")
+elseif(APPLE)
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${ft2-clone_SOURCE_DIR}/release/macos")
+else()
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${ft2-clone_SOURCE_DIR}/release/other")
+endif()
+
 option(EXTERNAL_LIBFLAC "Use external FLAC library" OFF)
-option(SDL2_STATIC "Use static SDL2 library." ON)
+option(SDL2_STATIC "Use static SDL2 library" ON)
 
 file(GLOB ft2-clone_SRC
     "${ft2-clone_SOURCE_DIR}/src/rtmidi/*.cpp"
